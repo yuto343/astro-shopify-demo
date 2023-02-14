@@ -59,17 +59,15 @@ export const VariantResult = z.object({
   priceV2: MoneyV2Result,
 });
 
-export const ProductResult = z
-  .object({
-    id: z.string(),
-    title: z.string(),
-    handle: z.string(),
-    images: z.object({
-      nodes: z.array(ImageResult),
-    }),
-    variants: z.object({
-      nodes: z.array(VariantResult),
-    }),
-    featuredImage: ImageResult,
-  })
-  .nullable();
+export const ProductResult = z.object({
+  id: z.string(),
+  title: z.string(),
+  handle: z.string(),
+  images: z.object({
+    nodes: z.array(ImageResult),
+  }),
+  variants: z.object({
+    nodes: z.array(VariantResult),
+  }),
+  featuredImage: ImageResult,
+});
